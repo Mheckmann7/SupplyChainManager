@@ -8,13 +8,15 @@ import "./App.css";
 class App extends Component {
   state = {
     loaded: false,
-    itemContract: '',
+    // itemContract: '',
     // cost: 0,
     // itemName: 'Item 1',
-    address: '',
+    // address: '',
     items: [{
       cost: 0,
-      itemName: 'Item 1'
+      itemName: 'Item 1',
+      step: 0,
+      itemAddress: '',
     }]
   };
 
@@ -87,7 +89,12 @@ class App extends Component {
     // let address = result.events.SupplyChainStep.returnValues._itemAddress; 
     this.setState({
       address: item.events.SupplyChainStep.returnValues,
-      items: [...this.state.items, {cost: cost, itemName: itemName}]
+      items: [...this.state.items, {
+        cost: cost,
+        itemName: itemName,
+        step: item.events.SupplyChainStep.returnValues._step,
+        itemAddress: item.events.SupplyChainStep.returnValues._itemAddress
+      }]
     })
   }
 
@@ -105,17 +112,19 @@ class App extends Component {
         Cost in Wei: <input type="text" name="cost" value={this.state.cost} onChange={this.handleInputChange} />
         Item ID: <input type="text" name="itemName" value={this.state.itemName} onChange={this.handleInputChange} />
         <button type="button" onClick={this.handleSubmit}>Create New Item</button>
-        <p>Send money to: {this.state.address._itemAddress}</p>
+        {/* <p>Send money to: {this.state.address._itemAddress}</p>
         <p>Step: {this.state.address._step}</p>
         <p>Cost: {this.state.cost}</p>
-        <p>Name: {this.state.itemName}</p>
+        <p>Name: {this.state.itemName}</p> */}
 
         <ol>
           {this.state.items.map((item, key) => {
             return (
             <div>
-              <li key={key}> {item.cost}</li>
-                <li key={key}> {item.itemName}</li>
+              <li key={key}>Cost: {item.cost}</li>
+              <li key={key}>ID: {item.itemName}</li>
+              <li key={key}>Pay To: {item.itemAddress}</li>
+              <li key={key}>Step: {item.step}</li>
             </div>
             )
           })}
