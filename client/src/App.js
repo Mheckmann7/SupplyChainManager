@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ItemManagerContract from "./contracts/ItemManager.json";
 import ItemContract from "./contracts/Item.json";
 import getWeb3 from "./getWeb3";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import "./App.css";
 
@@ -116,14 +117,28 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1>Supply Chain Manager</h1>
-        <h2>Items</h2>
-        <p>
-         Add Items
-        </p>
-        Cost in Wei: <input type="text" name="cost" value={this.state.cost} onChange={this.handleInputChange} />
-        Item ID: <input type="text" name="itemName" value={this.state.itemName} onChange={this.handleInputChange} />
-        <button type="button" onClick={this.handleSubmit}>Create New Item</button>
+        <h1 class="bg-light border border-primary p-5">Supply Chain Manager</h1>
+        <div class="m-5 w-25 p-5 bg-primary">
+          <h5>Create an Item</h5>
+          <div class="input-group pt-3 mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Cost in Wei</span>
+            </div>
+              <input type="text" class="form-control" aria-describedby="basic-addon1" name="cost" value={this.state.cost} onChange={this.handleInputChange}/>
+          </div>
+          <div class="input-group pb-3 mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Item ID</span>
+            </div>
+              <input type="text" class="form-control" aria-describedby="basic-addon1" name="itemName" value={this.state.itemName} onChange={this.handleInputChange}/>
+          </div>
+          <button class="btn btn-light" type="button" onClick={this.handleSubmit}>Create New Item</button>
+        </div>
+        
+        {/* Cost in Wei: <input type="text" name="cost" value={this.state.cost} onChange={this.handleInputChange} /> */}
+        {/* Item ID: <input type="text" name="itemName" value={this.state.itemName} onChange={this.handleInputChange} /> */}
+       
+     
         {/* <p>Send money to: {this.state.address._itemAddress}</p>
         <p>Step: {this.state.address._step}</p>
         <p>Cost: {this.state.cost}</p>

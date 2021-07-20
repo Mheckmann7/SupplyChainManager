@@ -20,3 +20,11 @@
 .App-link {
   color: #09d3ac;
 }
+
+.Add-items {
+  background-color: #09d3ac;
+  padding: 20px;
+  display: flex;
+  
+
+}
