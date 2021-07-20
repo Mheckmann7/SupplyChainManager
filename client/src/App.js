@@ -40,9 +40,21 @@ class App extends Component {
         ItemContract.networks[networkId] && ItemContract.networks[networkId].address,
       );
       // this.setState({ itemContract })
-      console.log('item manager', this.itemManager.methods)
+      console.log('item manager', this.itemManager.methods.items(1).call())
       console.log('item', this.item.methods)
-
+      for (var i = 1; i <= 10; i++) {
+        const item = await this.itemManager.methods.items(i).call()
+        this.setState({
+          items: [...this.state.items, {
+            cost: item._itemPrice,
+            itemName: item._identifier,
+            step: item._state,
+            itemAddress: item._item
+          }]
+        })
+      }
+      // const index = await this.itemManager.methods.items()
+      // console.log('index', index)
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
       this.listenToPaymentEvent();
@@ -58,7 +70,7 @@ class App extends Component {
 
   listenToPaymentEvent = () => {
     let self = this;
-    this.itemManager.events.SupplyChainStep().on("data", async function(event) {
+    this.itemManager.events.SupplyChainStep().on("message", async function(event) {
       if(event.returnValues._step === 1) {
         let item = await self.itemManager.methods.items(event.returnValues._itemIndex).call();
         console.log(item);
@@ -120,11 +132,11 @@ class App extends Component {
         <ol>
           {this.state.items.map((item, key) => {
             return (
-            <div>
-              <li key={key}>Cost: {item.cost}</li>
-              <li key={key}>ID: {item.itemName}</li>
-              <li key={key}>Pay To: {item.itemAddress}</li>
-              <li key={key}>Step: {item.step}</li>
+            <div key={key}>
+              <p>Cost: {item.cost}</p>
+              <p>ID: {item.itemName}</p>
+              <p>Pay To: {item.itemAddress}</p>
+              <p>Step: {item.step}</p>
             </div>
             )
           })}
