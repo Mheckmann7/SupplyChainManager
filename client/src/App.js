@@ -6,6 +6,18 @@ import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
+const color = {
+  0: "blue",
+  1: "red",
+  2: "green",
+}
+
+const statuses = {
+  0: "Item is available for purchase",
+  1: "Item has been bought, getting ready to ship",
+  2: "Item has been delivered",
+}
+
 class App extends Component {
   
   state = {
@@ -49,7 +61,7 @@ class App extends Component {
       // this.setState({ count: [...this.setState.count, this.setState.items.length ] })
       // console.log(this.state.count)
       let index = await this.itemManager.methods.itemIndex().call()
-      for (var i = 1; i <= index; i++) {
+      for (var i = 0; i <= index; i++) {
         const item = await this.itemManager.methods.items(i).call()
         this.setState({
           items: [...this.state.items, {
@@ -64,7 +76,7 @@ class App extends Component {
       // console.log('index', index)
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.listenToPaymentEvent();
+      // this.listenToPaymentEvent();
       this.setState({ loaded:true });
     } catch (error) {
       // Catch any errors for any of the above operations.
@@ -75,17 +87,17 @@ class App extends Component {
     }
   };
 
-  listenToPaymentEvent = () => {
-    let self = this;
-    this.itemManager.events.SupplyChainStep().on("message", async function(event) {
-      if(event.returnValues._step === 1) {
-        let item = await self.itemManager.methods.items(event.returnValues._itemIndex).call();
-        console.log(item);
-        alert("Item " + item._identifier + " was paid, deliver it now!");
-      };
-      console.log("event", event);
-    });
-  }
+  // listenToPaymentEvent = () => {
+  //   let self = this;
+  //   this.itemManager.events.SupplyChainStep().on("message", async function(event) {
+  //     if(event.returnValues._step === 1) {
+  //       let item = await self.itemManager.methods.items(event.returnValues._itemIndex).call();
+  //       console.log(item);
+  //       alert("Item " + item._identifier + " was paid, deliver it now!");
+  //     };
+  //     console.log("event", event);
+  //   });
+  // }
   handleInputChange = (event) => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
@@ -120,6 +132,8 @@ class App extends Component {
     })
   }
 
+ 
+
   render() {
     if (!this.state.loaded) {
       return <div>Loading Web3, accounts, and contract...</div>;
@@ -127,6 +141,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 class="bg-light border p-5">Supply Chain Manager</h1>
+        <div style={{display: 'flex', justifyContent: "center"}}>
         <div class="m-5 w-25 p-5 bg-primary">
           <h5 class="text-white">Create an Item</h5>
           <div class="input-group pt-3 mb-3">
@@ -143,7 +158,8 @@ class App extends Component {
           </div>
        
           <button class="btn btn-light" type="button" onClick={this.handleSubmit}>Create New Item</button>
-        </div>
+          </div>
+          </div>
   
         
         {/* Cost in Wei: <input type="text" name="cost" value={this.state.cost} onChange={this.handleInputChange} /> */}
@@ -163,11 +179,13 @@ class App extends Component {
                   <div class="card m-2 text-left mr-5 w-75">
                     <div class="card-header bg-secondary text-white font-weight-bold d-flex justify-content-between">
                       <p>ID: {item.itemName}</p>
-                      <p class="text-right">Cost: {item.cost}</p>
+                      <p class="text-right">Cost: {item.cost} Wei</p>
                     </div>
                     <div class="card-body">
-                      <p>Pay To: {item.itemAddress}</p>
-                      <p>Step: {item.step}</p>
+                      <p>Pay to Address: {item.itemAddress}</p>
+                      <p style={{color: color[item.step]}}>{statuses[item.step]} 
+
+                      </p>
                     </div>
                   </div>
                 </div>

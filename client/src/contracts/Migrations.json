@@ -969,12 +969,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xF452d819cB2bDCeb4341616008760ECe117eC7c3",
-      "transactionHash": "0x5e4357a23693f9fb4840579160fb4d9ca223aedbf15bbb06ec24cfcc1916d44a"
+      "address": "0xFb2077E951e98C252eeC17BBb2facF67751b99F8",
+      "transactionHash": "0xd893b75b901e972a9be2dcac12e83413919311ee65ddee57d2c46f648ef2aa4f"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-20T16:12:32.725Z",
+  "updatedAt": "2021-07-20T21:42:31.192Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
