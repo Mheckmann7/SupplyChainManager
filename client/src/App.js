@@ -7,6 +7,7 @@ import getWeb3 from "./getWeb3";
 import "./App.css";
 
 class App extends Component {
+  
   state = {
     loaded: false,
     // itemContract: '',
@@ -47,8 +48,8 @@ class App extends Component {
       // const count = await this.itemManager.methods.index().call()
       // this.setState({ count: [...this.setState.count, this.setState.items.length ] })
       // console.log(this.state.count)
-      let count = this.state.items.length;
-      for (var i = 0; i <= count; i++) {
+      let index = await this.itemManager.methods.itemIndex().call()
+      for (var i = 1; i <= index; i++) {
         const item = await this.itemManager.methods.items(i).call()
         this.setState({
           items: [...this.state.items, {
@@ -103,12 +104,13 @@ class App extends Component {
     let item = await this.itemManager.methods.createItem(itemName, cost).send({ from: this.accounts[0] });
     
     console.log("item submitted", item);
+    // let newCount = this.state.count + 1;
     // cost.push(cost);
     // this.setState({cart: cart});
     // let address = result.events.SupplyChainStep.returnValues._itemAddress; 
     this.setState({
       // address: item.events.SupplyChainStep.returnValues,
-
+      // count: newCount, 
       items: [...this.state.items, {
         cost: cost,
         itemName: itemName,

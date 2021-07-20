@@ -70,9 +70,9 @@
       "type": "receive"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ItemManager\",\"name\":\"_parentContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_priceInWei\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"index\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceInWei\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pricePaid\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Item.sol\":\"Item\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Item.sol\":{\"keccak256\":\"0x2d84880c14e40ea2cce91274d181caeb224f5cb8e146f39314b6b4b3107b1a62\",\"urls\":[\"bzz-raw://aa947182c6ad81ca1bb5433a9888907634515ef8218391bba05fb1b0dc561347\",\"dweb:/ipfs/QmTKb8N5hB9WcE99wRW4i8huEHqiGs7CvoPhyG7E4DVHZD\"]},\"project:/contracts/ItemManager.sol\":{\"keccak256\":\"0x0c2e4cde7b0d999d9a8b314d528f0839870cbfaedb0cf5267a76f64f8cbfe242\",\"urls\":[\"bzz-raw://6f4f20ed331332626c3cca295f0eefa8e033fcc3248c00c69f0a184345b7c5fd\",\"dweb:/ipfs/QmPUXwSJk285PhZxkmUEMLCcq8oYzb2s2ZxFuntZRWGXvo\"]},\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0x9de61102d8c1423e59488df57a2baae941f3fd3228da8cc465ed0c04154736f3\",\"urls\":[\"bzz-raw://b9f063493bdf395889de72457ce2dfefd90e38279a529012dd752c20bd4eb09e\",\"dweb:/ipfs/QmUrRvAMZEjbPR6JamzXCPSYbkJgwexxqazNhdfvKXjsfq\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516104b23803806104b28339818101604052606081101561003357600080fd5b81019080805190602001909291908051906020019092919080519060200190929190505050816000819055508060028190555082600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050506103f9806100b96000396000f3fe6080604052600436106100385760003560e01c80632986c0e51461030e5780633c8da5881461033957806389794d0014610364576102ff565b366102ff576000600154146100b5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f4974656d206973207061696420616c726561647900000000000000000000000081525060200191505060405180910390fd5b346000541461012c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f4f6e6c792066756c6c207061796d656e747320616c6c6f77656400000000000081525060200191505060405180910390fd5b346001600082825401925050819055506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1634600254604051602401808281526020019150506040516020818303038152906040527f800fb83f000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff83818316178352505050506040518082805190602001908083835b6020831061023b5780518252602082019150602081019050602083039250610218565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d806000811461029d576040519150601f19603f3d011682016040523d82523d6000602084013e6102a2565b606091505b50509050806102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806103a26022913960400191505060405180910390fd5b50005b34801561030b57600080fd5b50005b34801561031a57600080fd5b5061032361038f565b6040518082815260200191505060405180910390f35b34801561034557600080fd5b5061034e610395565b6040518082815260200191505060405180910390f35b34801561037057600080fd5b5061037961039b565b6040518082815260200191505060405180910390f35b60025481565b60005481565b6001548156fe546865207472616e73616374696f6e20776173206e6f74207375636365737366756ca2646970667358221220956414d2f7e714bf9a4f4222ff4685f4348a02e1c5481cc68b0c6c6e532ac32364736f6c63430006040033",
-  "deployedBytecode": "0x6080604052600436106100385760003560e01c80632986c0e51461030e5780633c8da5881461033957806389794d0014610364576102ff565b366102ff576000600154146100b5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f4974656d206973207061696420616c726561647900000000000000000000000081525060200191505060405180910390fd5b346000541461012c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f4f6e6c792066756c6c207061796d656e747320616c6c6f77656400000000000081525060200191505060405180910390fd5b346001600082825401925050819055506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1634600254604051602401808281526020019150506040516020818303038152906040527f800fb83f000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff83818316178352505050506040518082805190602001908083835b6020831061023b5780518252602082019150602081019050602083039250610218565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d806000811461029d576040519150601f19603f3d011682016040523d82523d6000602084013e6102a2565b606091505b50509050806102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806103a26022913960400191505060405180910390fd5b50005b34801561030b57600080fd5b50005b34801561031a57600080fd5b5061032361038f565b6040518082815260200191505060405180910390f35b34801561034557600080fd5b5061034e610395565b6040518082815260200191505060405180910390f35b34801561037057600080fd5b5061037961039b565b6040518082815260200191505060405180910390f35b60025481565b60005481565b6001548156fe546865207472616e73616374696f6e20776173206e6f74207375636365737366756ca2646970667358221220956414d2f7e714bf9a4f4222ff4685f4348a02e1c5481cc68b0c6c6e532ac32364736f6c63430006040033",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ItemManager\",\"name\":\"_parentContract\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_priceInWei\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"index\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceInWei\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pricePaid\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Item.sol\":\"Item\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Item.sol\":{\"keccak256\":\"0x2d84880c14e40ea2cce91274d181caeb224f5cb8e146f39314b6b4b3107b1a62\",\"urls\":[\"bzz-raw://aa947182c6ad81ca1bb5433a9888907634515ef8218391bba05fb1b0dc561347\",\"dweb:/ipfs/QmTKb8N5hB9WcE99wRW4i8huEHqiGs7CvoPhyG7E4DVHZD\"]},\"project:/contracts/ItemManager.sol\":{\"keccak256\":\"0x6b6dcf3c0441dec9b35d5ef6648d88fe7b9c18fb47ff9b9307376ea56018cf1c\",\"urls\":[\"bzz-raw://697331ea7953164e4052ead923a1e6eecb412360af45f3c92fdaf812dced83c2\",\"dweb:/ipfs/QmPtdgYaAyBDcmSgyomgFAU1yQdJnukazSSNkCY4BnbQen\"]},\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0x9de61102d8c1423e59488df57a2baae941f3fd3228da8cc465ed0c04154736f3\",\"urls\":[\"bzz-raw://b9f063493bdf395889de72457ce2dfefd90e38279a529012dd752c20bd4eb09e\",\"dweb:/ipfs/QmUrRvAMZEjbPR6JamzXCPSYbkJgwexxqazNhdfvKXjsfq\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516104b23803806104b28339818101604052606081101561003357600080fd5b81019080805190602001909291908051906020019092919080519060200190929190505050816000819055508060028190555082600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050506103f9806100b96000396000f3fe6080604052600436106100385760003560e01c80632986c0e51461030e5780633c8da5881461033957806389794d0014610364576102ff565b366102ff576000600154146100b5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f4974656d206973207061696420616c726561647900000000000000000000000081525060200191505060405180910390fd5b346000541461012c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f4f6e6c792066756c6c207061796d656e747320616c6c6f77656400000000000081525060200191505060405180910390fd5b346001600082825401925050819055506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1634600254604051602401808281526020019150506040516020818303038152906040527f800fb83f000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff83818316178352505050506040518082805190602001908083835b6020831061023b5780518252602082019150602081019050602083039250610218565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d806000811461029d576040519150601f19603f3d011682016040523d82523d6000602084013e6102a2565b606091505b50509050806102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806103a26022913960400191505060405180910390fd5b50005b34801561030b57600080fd5b50005b34801561031a57600080fd5b5061032361038f565b6040518082815260200191505060405180910390f35b34801561034557600080fd5b5061034e610395565b6040518082815260200191505060405180910390f35b34801561037057600080fd5b5061037961039b565b6040518082815260200191505060405180910390f35b60025481565b60005481565b6001548156fe546865207472616e73616374696f6e20776173206e6f74207375636365737366756ca264697066735822122079b9357ae2e4803b798feb4071c5d9ba508fd19446619cbba18e03d0f3bb803764736f6c63430006040033",
+  "deployedBytecode": "0x6080604052600436106100385760003560e01c80632986c0e51461030e5780633c8da5881461033957806389794d0014610364576102ff565b366102ff576000600154146100b5576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260148152602001807f4974656d206973207061696420616c726561647900000000000000000000000081525060200191505060405180910390fd5b346000541461012c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601a8152602001807f4f6e6c792066756c6c207061796d656e747320616c6c6f77656400000000000081525060200191505060405180910390fd5b346001600082825401925050819055506000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1634600254604051602401808281526020019150506040516020818303038152906040527f800fb83f000000000000000000000000000000000000000000000000000000007bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19166020820180517bffffffffffffffffffffffffffffffffffffffffffffffffffffffff83818316178352505050506040518082805190602001908083835b6020831061023b5780518252602082019150602081019050602083039250610218565b6001836020036101000a03801982511681845116808217855250505050505090500191505060006040518083038185875af1925050503d806000811461029d576040519150601f19603f3d011682016040523d82523d6000602084013e6102a2565b606091505b50509050806102fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806103a26022913960400191505060405180910390fd5b50005b34801561030b57600080fd5b50005b34801561031a57600080fd5b5061032361038f565b6040518082815260200191505060405180910390f35b34801561034557600080fd5b5061034e610395565b6040518082815260200191505060405180910390f35b34801561037057600080fd5b5061037961039b565b6040518082815260200191505060405180910390f35b60025481565b60005481565b6001548156fe546865207472616e73616374696f6e20776173206e6f74207375636365737366756ca264697066735822122079b9357ae2e4803b798feb4071c5d9ba508fd19446619cbba18e03d0f3bb803764736f6c63430006040033",
   "sourceMap": "87:814:0:-:0;;;228:222;5:9:-1;2:2;;;27:1;24;17:12;2:2;228:222:0;;;;;;;;;;;;;;;15:2:-1;10:3;7:11;4:2;;;31:1;28;21:12;4:2;228:222:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;366:11;353:10;:24;;;;395:6;387:5;:14;;;;428:15;411:14;;:32;;;;;;;;;;;;;;;;;;228:222;;;87:814;;;;;;",
   "deployedSourceMap": "87:814:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;514:1;501:9;;:14;493:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;572:9;558:10;;:23;550:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;635:9;622;;:22;;;;;;;;;;;655:12;681:14;;;;;;;;;;;673:28;;709:9;784:5;;733:57;;;;;;;;;;;;;;;49:4:-1;39:7;30;26:21;22:32;13:7;6:49;733:57:0;;;;;;;38:4:-1;29:7;25:18;67:10;61:17;96:58;199:8;192:4;186;182:15;179:29;167:10;160:49;0:215;;;733:57:0;673:127;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;673:127:0;;;;;;;;;;;;;;;;;;;;;;;;;12:1:-1;19;14:27;;;;67:4;61:11;56:16;;134:4;130:9;123:4;105:16;101:27;97:43;94:1;90:51;84:4;77:65;157:16;154:1;147:27;211:16;208:1;201:4;198:1;194:12;179:49;5:228;;14:27;32:4;27:9;;5:228;;654:146:0;;;818:7;810:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:415;87:814;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;87:814:0;;168:20;;5:9:-1;2:2;;;27:1;24;17:12;2:2;168:20:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;107:25;;5:9:-1;2:2;;;27:1;24;17:12;2:2;107:25:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;138:24;;5:9:-1;2:2;;;27:1;24;17:12;2:2;138:24:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;168:20;;;;:::o;107:25::-;;;;:::o;138:24::-;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.6.0;\n\nimport \"./ItemManager.sol\";\n\ncontract Item {\n    uint256 public priceInWei;\n    uint256 public pricePaid;\n    uint256 public index;\n\n    ItemManager parentContract;\n\n    constructor(\n        ItemManager _parentContract,\n        uint256 _priceInWei,\n        uint256 _index\n    ) public {\n        priceInWei = _priceInWei;\n        index = _index;\n        parentContract = _parentContract;\n    }\n\n    receive() external payable {\n        require(pricePaid == 0, \"Item is paid already\");\n        require(priceInWei == msg.value, \"Only full payments allowed\");\n        pricePaid += msg.value;\n        (bool success, ) = address(parentContract).call{value: msg.value}(\n            abi.encodeWithSignature(\"triggerPayment(uint256)\", index)\n        );\n        require(success, \"The transaction was not successful\");\n    }\n\n    fallback() external {}\n}\n",
@@ -104,7 +104,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 84,
-        "sourceUnit": 283,
+        "sourceUnit": 284,
         "src": "58:27:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -218,7 +218,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ItemManager_$282",
+              "typeIdentifier": "t_contract$_ItemManager_$283",
               "typeString": "contract ItemManager"
             },
             "typeName": {
@@ -226,10 +226,10 @@
               "id": 9,
               "name": "ItemManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 282,
+              "referencedDeclaration": 283,
               "src": "195:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ItemManager_$282",
+                "typeIdentifier": "t_contract$_ItemManager_$283",
                 "typeString": "contract ItemManager"
               }
             },
@@ -351,7 +351,7 @@
                       "referencedDeclaration": 10,
                       "src": "411:14:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ItemManager_$282",
+                        "typeIdentifier": "t_contract$_ItemManager_$283",
                         "typeString": "contract ItemManager"
                       }
                     },
@@ -366,13 +366,13 @@
                       "referencedDeclaration": 12,
                       "src": "428:15:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ItemManager_$282",
+                        "typeIdentifier": "t_contract$_ItemManager_$283",
                         "typeString": "contract ItemManager"
                       }
                     },
                     "src": "411:32:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ItemManager_$282",
+                      "typeIdentifier": "t_contract$_ItemManager_$283",
                       "typeString": "contract ItemManager"
                     }
                   },
@@ -405,7 +405,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ItemManager_$282",
+                    "typeIdentifier": "t_contract$_ItemManager_$283",
                     "typeString": "contract ItemManager"
                   },
                   "typeName": {
@@ -413,10 +413,10 @@
                     "id": 11,
                     "name": "ItemManager",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 282,
+                    "referencedDeclaration": 283,
                     "src": "249:11:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ItemManager_$282",
+                      "typeIdentifier": "t_contract$_ItemManager_$283",
                       "typeString": "contract ItemManager"
                     }
                   },
@@ -954,7 +954,7 @@
                               "referencedDeclaration": 10,
                               "src": "681:14:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_ItemManager_$282",
+                                "typeIdentifier": "t_contract$_ItemManager_$283",
                                 "typeString": "contract ItemManager"
                               }
                             }
@@ -962,7 +962,7 @@
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_contract$_ItemManager_$282",
+                                "typeIdentifier": "t_contract$_ItemManager_$283",
                                 "typeString": "contract ItemManager"
                               }
                             ],
@@ -1254,7 +1254,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 283,
+          "SourceUnit": 284,
           "absolutePath": "project:/contracts/ItemManager.sol",
           "file": "./ItemManager.sol",
           "scope": 84,
@@ -1387,7 +1387,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ItemManager",
-                  "referencedDeclaration": 282,
+                  "referencedDeclaration": 283,
                   "type": "contract ItemManager"
                 },
                 "id": 9,
@@ -1435,7 +1435,7 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "ItemManager",
-                          "referencedDeclaration": 282,
+                          "referencedDeclaration": 283,
                           "type": "contract ItemManager"
                         },
                         "id": 11,
@@ -2146,7 +2146,7 @@
                                         "attributes": {
                                           "argumentTypes": [
                                             {
-                                              "typeIdentifier": "t_contract$_ItemManager_$282",
+                                              "typeIdentifier": "t_contract$_ItemManager_$283",
                                               "typeString": "contract ItemManager"
                                             }
                                           ],
@@ -2497,7 +2497,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-07-19T14:17:50.622Z",
+  "updatedAt": "2021-07-20T16:12:31.763Z",
   "devdoc": {
     "methods": {}
   },

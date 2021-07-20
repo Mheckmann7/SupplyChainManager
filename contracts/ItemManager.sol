@@ -17,9 +17,8 @@ contract ItemManager is Ownable {
         uint256 _itemPrice;
         ItemManager.SupplyChainState _state;
     }
-
     mapping(uint256 => S_Item) public items;
-    uint256 itemIndex;
+    uint256 public itemIndex = 0;
 
     event SupplyChainStep(
         uint256 _itemIndex,
