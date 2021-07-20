@@ -13,6 +13,7 @@ class App extends Component {
     // cost: 0,
     // itemName: 'Item 1',
     // address: '',
+    // count: 0,
     items: [{
       cost: 0,
       itemName: 'Item 1',
@@ -43,7 +44,11 @@ class App extends Component {
       // this.setState({ itemContract })
       console.log('item manager', this.itemManager.methods.items(1).call())
       console.log('item', this.item.methods)
-      for (var i = 1; i <= 10; i++) {
+      // const count = await this.itemManager.methods.index().call()
+      // this.setState({ count: [...this.setState.count, this.setState.items.length ] })
+      // console.log(this.state.count)
+      let count = this.state.items.length;
+      for (var i = 0; i <= count; i++) {
         const item = await this.itemManager.methods.items(i).call()
         this.setState({
           items: [...this.state.items, {
@@ -96,12 +101,14 @@ class App extends Component {
   handleSubmit = async() => {
     const { cost, itemName } = this.state;
     let item = await this.itemManager.methods.createItem(itemName, cost).send({ from: this.accounts[0] });
+    
     console.log("item submitted", item);
     // cost.push(cost);
     // this.setState({cart: cart});
     // let address = result.events.SupplyChainStep.returnValues._itemAddress; 
     this.setState({
-      address: item.events.SupplyChainStep.returnValues,
+      // address: item.events.SupplyChainStep.returnValues,
+
       items: [...this.state.items, {
         cost: cost,
         itemName: itemName,
@@ -117,23 +124,25 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1 class="bg-light border border-primary p-5">Supply Chain Manager</h1>
+        <h1 class="bg-light border p-5">Supply Chain Manager</h1>
         <div class="m-5 w-25 p-5 bg-primary">
-          <h5>Create an Item</h5>
+          <h5 class="text-white">Create an Item</h5>
           <div class="input-group pt-3 mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Cost in Wei</span>
+              <span class="input-group-text">Item ID</span>
             </div>
-              <input type="text" class="form-control" aria-describedby="basic-addon1" name="cost" value={this.state.cost} onChange={this.handleInputChange}/>
+              <input type="text" class="form-control" placeholder="123XYZ..." name="itemName" value={this.state.itemName} onChange={this.handleInputChange}/>
           </div>
           <div class="input-group pb-3 mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">Item ID</span>
+              <span class="input-group-text" id="basic-addon1">Cost in Wei</span>
             </div>
-              <input type="text" class="form-control" aria-describedby="basic-addon1" name="itemName" value={this.state.itemName} onChange={this.handleInputChange}/>
+              <input type="text" class="form-control" placeholder="100" name="cost" value={this.state.cost} onChange={this.handleInputChange}/>
           </div>
+       
           <button class="btn btn-light" type="button" onClick={this.handleSubmit}>Create New Item</button>
         </div>
+  
         
         {/* Cost in Wei: <input type="text" name="cost" value={this.state.cost} onChange={this.handleInputChange} /> */}
         {/* Item ID: <input type="text" name="itemName" value={this.state.itemName} onChange={this.handleInputChange} /> */}
@@ -146,14 +155,22 @@ class App extends Component {
 
         <ol>
           {this.state.items.map((item, key) => {
-            return (
-            <div key={key}>
-              <p>Cost: {item.cost}</p>
-              <p>ID: {item.itemName}</p>
-              <p>Pay To: {item.itemAddress}</p>
-              <p>Step: {item.step}</p>
-            </div>
-            )
+            if (key !== 0) {
+              return (
+                <div key={key} class="d-flex justify-content-center">
+                  <div class="card m-2 text-left mr-5 w-75">
+                    <div class="card-header bg-secondary text-white font-weight-bold d-flex justify-content-between">
+                      <p>ID: {item.itemName}</p>
+                      <p class="text-right">Cost: {item.cost}</p>
+                    </div>
+                    <div class="card-body">
+                      <p>Pay To: {item.itemAddress}</p>
+                      <p>Step: {item.step}</p>
+                    </div>
+                  </div>
+                </div>
+              )
+            }
           })}
         </ol>
       </div>
