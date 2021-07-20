@@ -22,4 +22,4 @@ Create an automated supply chain solution that automatically dispatches orders u
 - React.js
 - Bootstrap
 
-[Blockchain Supply Chain](https://imgur.com/yBoFITA)
+![Blockchain Supply Chain](https://imgur.com/yBoFITA)
